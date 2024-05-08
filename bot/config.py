@@ -11,7 +11,6 @@ class Telegram:
     PORT = int(getenv("PORT", "8080"))
     BASE_URL = getenv("BASE_URL").rstrip('/')
     AUTH_CHANNEL = getenv("AUTH_CHANNEL").split(", ")
-    PASSWORDS = {channel: getenv(f"AUTH_CHANNEL_{i}_PASSWORD", "") for i, channel in enumerate(AUTH_CHANNELS, start=1)}
     THEME = getenv("THEME", "slate")
     USERNAME = getenv("USERNAME", "IdontKnow")
     PASSWORD = getenv("PASSWORD", "IDontTell")
